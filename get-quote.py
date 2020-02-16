@@ -9,7 +9,13 @@ def main():
     f.close()
     
     rnd = random.randint(0, len(quotes))
-    print(quotes[rnd])
+    quote = quotes[rnd].strip()
+    print(quote)
+
+    output = open("quote.txt", "w")
+    output.write(quote)
+    output.close()
+
 
 if __name__== "__main__":
     main()
